@@ -1,0 +1,10 @@
+#NPM / Node
+node_modules
+package-lock.json
+
+#IDE / Code Editor
+.vscode
+.idea
+
+#enviroments
+.env
