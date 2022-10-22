@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 
+//== Router Imports
+const userRoute = require('./routes/user');
+
 //== Internal imports
 const {notFoundHandler, errorHandler} = require('./middlewares/common/errorHandler');
 
@@ -29,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 
 //== Routing Setup
+app.use('/user', userRoute);
 
 //== 404 Error Handler
 app.use(notFoundHandler);
