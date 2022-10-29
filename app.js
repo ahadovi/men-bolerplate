@@ -10,6 +10,7 @@ const userRoute = require('./routes/user');
 
 //== Internal imports
 const {notFoundHandler, errorHandler} = require('./middlewares/common/errorHandler');
+const checkLogin = require('./middlewares/check-login/checkLogin');
 
 const app = express();
 dotenv.config();
