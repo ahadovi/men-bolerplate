@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EJS Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div class="container mx-auto p-6">
+    <h1 class="text-center mb-8 text-5xl font-[700]">Image Gallery with ejs</h1>
+    <ul class="columns-5 gap-3">
+        <% data?.images?.forEach((item) => { %>
+            <li class="mb-3 rounded-lg overflow-hidden">
+                <img src="http://localhost:4200<%= item.url %>"
+                     alt="<%= item.title.toLowerCase() %>"
+                     class="h-auto max-w-full">
+            </li>
+        <% }); %>
+    </ul>
+</div>
+
+</body>
+</html>
